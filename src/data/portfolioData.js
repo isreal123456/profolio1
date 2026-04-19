@@ -1,22 +1,47 @@
-export const pagesData = {
+export const data = {
+  navLinks: [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
+  ],
+
+  socialLinks: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/isreal123456',
+      icon: 'github',
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/israel-sunday-3b21352b0/',
+      icon: 'linkedin',
+    },
+    {
+      name: 'Twitter',
+      url: 'https://x.com/IsraelSund20928',
+      icon: 'twitter',
+    },
+  ],
+
   home: {
     name: 'Israel Sunday',
     role: 'Full Stack Developer',
-    tagline: 'Building modern web and mobile applications',
+    tagline: 'Building modern web applications',
     description:
-      'I create scalable, user-friendly applications using modern technologies like React, FastAPI, and Tailwind CSS.',
-    cta: {
-      primary: 'View Projects',
-      secondary: 'Contact Me',
-    },
+      'I build scalable, fast, and user-friendly web and mobile applications using modern technologies.',
   },
 
   about: {
-    title: 'About Me',
     description:
-      'I am a passionate full-stack developer with over 5 years of experience building web and mobile applications. I specialize in creating responsive interfaces and scalable backend systems.',
-    details:
-      'My focus is on writing clean, maintainable code and delivering high-performance applications. I enjoy solving real-world problems and continuously improving my skills in modern technologies.',
+      'I am a full-stack developer with strong experience in building modern web applications. I enjoy creating clean UI, scalable backend systems, and solving real-world problems.',
+    stats: [
+      { label: 'Years Experience', value: 5 },
+      { label: 'Projects Delivered', value: 5 },
+      { label: 'Happy Clients', value: 5 },
+      { label: 'Technologies', value: 18 },
+    ],
     tags: [
       'UI Engineering',
       'Motion Design',
@@ -25,63 +50,53 @@ export const pagesData = {
       'Performance Optimization',
       'Accessibility',
     ],
-    stats: [
-      { label: 'Years Experience', value: '5+' },
-      { label: 'Projects Delivered', value: '5+' },
-      { label: 'Happy Clients', value: '5+' },
-      { label: 'Technologies', value: '18+' },
-    ],
   },
 
-  skills: {
-    title: 'Skills',
-    categories: [
-      {
-        title: 'Frontend',
-        items: [
-          { name: 'React', level: 95 },
-          { name: 'TypeScript', level: 88 },
-          { name: 'Tailwind CSS', level: 92 },
-          { name: 'Next.js', level: 84 },
-        ],
-      },
-      {
-        title: 'Backend',
-        items: [
-          { name: 'FastAPI', level: 86 },
-          { name: 'Django', level: 84 },
-          { name: 'MongoDB', level: 82 },
-          { name: 'PostgreSQL', level: 79 },
-        ],
-      },
-      {
-        title: 'Tools',
-        items: [
-          { name: 'Git & GitHub', level: 93 },
-          { name: 'Figma', level: 85 },
-          { name: 'Docker', level: 60 },
-          { name: 'CI/CD', level: 80 },
-        ],
-      },
-    ],
-  },
+  skills: [
+    {
+      title: 'Frontend',
+      items: [
+        { name: 'React', level: 95, icon: 'react' },
+        { name: 'TypeScript', level: 88, icon: 'typescript' },
+        { name: 'Tailwind CSS', level: 92, icon: 'tailwind' },
+        { name: 'Next.js', level: 84, icon: 'next' },
+      ],
+    },
+    {
+      title: 'Backend',
+      items: [
+        { name: 'FastAPI', level: 86, icon: 'server' },
+        { name: 'Django', level: 84, icon: 'server' },
+        { name: 'MongoDB', level: 82, icon: 'db' },
+        { name: 'PostgreSQL', level: 79, icon: 'db' },
+      ],
+    },
+    {
+      title: 'Tools',
+      items: [
+        { name: 'Git & GitHub', level: 93, icon: 'git' },
+        { name: 'Figma', level: 85, icon: 'figma' },
+        { name: 'Docker', level: 60, icon: 'docker' },
+        { name: 'CI/CD', level: 80, icon: 'ci' },
+      ],
+    },
+  ],
 
   projects: {
-    title: 'Projects',
     filters: ['All', 'Web', 'Mobile', 'SaaS'],
     items: [
       {
         id: 1,
-        title: 'Financial Tracker',
+        title: 'Financial Tracker', // fixed typo
         category: 'Web',
         image:
           'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80',
         description:
-          'A finance tracker web app for managing income and expenses.',
+          'A finance tracker web app to manage income and expenses.',
         tech: ['React', 'FastAPI', 'Tailwind CSS', 'SQLite'],
         github: 'https://github.com/money-tracker',
         details:
-          'Users can track transactions, categorize expenses, and view real-time financial insights.',
+          'Users can record transactions, categorize spending, and track financial balance in real-time.',
       },
       {
         id: 2,
@@ -90,12 +105,12 @@ export const pagesData = {
         image:
           'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80',
         description:
-          'A workout planner with wearable device integration.',
+          'Workout planner with wearable data sync.',
         tech: ['React Native', 'Firebase', 'Expo'],
         live: 'https://example.com',
         github: 'https://github.com/',
         details:
-          'Includes workout tracking, streak systems, and real-time notifications.',
+          'Includes streak tracking, subscriptions, and real-time push notifications.',
       },
       {
         id: 3,
@@ -104,12 +119,12 @@ export const pagesData = {
         image:
           'https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80',
         description:
-          'A CRM system with analytics dashboards and automation.',
+          'CRM system with dashboards and analytics.',
         tech: ['React', 'Chart.js', 'Express', 'PostgreSQL'],
         live: 'https://example.com',
         github: 'https://github.com/',
         details:
-          'Helps teams manage leads, track performance, and automate workflows.',
+          'Provides dashboards, automation workflows, and optimized reporting.',
       },
       {
         id: 4,
@@ -118,25 +133,30 @@ export const pagesData = {
         image:
           'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80',
         description:
-          'A SaaS admin dashboard with role-based access control.',
+          'Admin dashboard with role-based access.',
         tech: ['Vite', 'Framer Motion', 'Supabase'],
         live: 'https://example.com',
         github: 'https://github.com/',
         details:
-          'Provides team management, onboarding, and advanced UI interactions.',
+          'Includes onboarding, team management, and advanced UI interactions.',
       },
     ],
   },
 
   contact: {
-    title: 'Contact Me',
-    description:
-      'Have a project or idea? Let’s work together. Feel free to reach out.',
     email: 'youremail@example.com',
-    socials: [
-      { name: 'GitHub', url: 'https://github.com/isreal123456' },
-      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/israel-sunday-3b21352b0/' },
-      { name: 'Twitter', url: 'https://x.com/IsraelSund20928' },
-    ],
+    message:
+      'Have a project or idea? Let’s work together.',
   },
 }
+
+export const navLinks = data.navLinks
+export const socialLinks = data.socialLinks
+export const home = data.home
+export const about = data.about
+export const stats = data.about.stats
+export const aboutTags = data.about.tags
+export const skillCategories = data.skills
+export const projectFilters = data.projects.filters
+export const projects = data.projects.items
+export const contact = data.contact
