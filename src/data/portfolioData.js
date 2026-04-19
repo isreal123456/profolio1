@@ -37,10 +37,10 @@ export const data = {
     description:
       'I am a full-stack developer with strong experience in building modern web applications. I enjoy creating clean UI, scalable backend systems, and solving real-world problems.',
     stats: [
-      { label: 'Years Experience', value: 5 },
-      { label: 'Projects Delivered', value: 5 },
-      { label: 'Happy Clients', value: 5 },
-      { label: 'Technologies', value: 18 },
+      { label: 'Years Experience', value: '5+' },
+      { label: 'Projects Delivered', value: '5+' },
+      { label: 'Happy Clients', value: '5+' },
+      { label: 'Technologies', value: '18+' },
     ],
     tags: [
       'UI Engineering',
@@ -154,7 +154,10 @@ export const navLinks = data.navLinks
 export const socialLinks = data.socialLinks
 export const home = data.home
 export const about = data.about
-export const stats = data.about.stats
+export const stats = data.about.stats.map((stat) => ({
+  ...stat,
+  value: Number.parseInt(String(stat.value), 10) || 0,
+}))
 export const aboutTags = data.about.tags
 export const skillCategories = data.skills
 export const projectFilters = data.projects.filters
