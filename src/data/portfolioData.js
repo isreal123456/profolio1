@@ -44,6 +44,7 @@ export const data = {
     ],
     tags: [
       'UI Engineering',
+      'Full Stack Development',
       'Motion Design',
       'Design Systems',
       'API Integration',
@@ -76,7 +77,7 @@ export const data = {
       items: [
         { name: 'Git & GitHub', level: 93, icon: 'git' },
         { name: 'Figma', level: 85, icon: 'figma' },
-        { name: 'Docker', level: 60, icon: 'docker' },
+        // { name: 'Docker', level: 60, icon: 'docker' },
         { name: 'CI/CD', level: 80, icon: 'ci' },
       ],
     },
