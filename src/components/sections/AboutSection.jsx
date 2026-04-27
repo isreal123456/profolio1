@@ -91,12 +91,12 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <AnimatedButton
+            {/* <AnimatedButton
               className="mt-8 text-white bg-gradient-to-r from-primaryStart to-primaryEnd"
               onClick={() => window.open('/resume.pdf', '_blank')}
             >
               Download CV
-            </AnimatedButton>
+            </AnimatedButton> */}
           </motion.div>
         </div>
       </motion.div>
