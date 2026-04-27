@@ -1,3 +1,5 @@
+import too from '../assets/too.png'
+
 export const data = {
   navLinks: [
     { id: 'home', label: 'Home' },
@@ -117,8 +119,7 @@ export const data = {
         id: 3,
         title: 'StyleHub',
         category: 'SaaS',
-        image:
-          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80',
+        image: too,
         description:
           'E-commerce frontend for fashion retailers.',
         tech: ['Vite','Tailwind CSS'],
