@@ -16,31 +16,30 @@ const ProjectCard = ({ project, onOpen }) => {
           src={project.image}
           alt={project.title}
           loading="lazy"
-          className="h-56 w-full object-cover transition duration-500 group-hover:scale-110"
+          className="object-cover w-full h-56 transition duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-base/95 via-transparent to-transparent opacity-75" />
+        <div className="absolute inset-0 opacity-75 bg-gradient-to-t from-base/95 via-transparent to-transparent" />
       </div>
 
-      <div className="space-y-4 p-6">
-        <h3 className="font-display text-2xl text-white">{project.title}</h3>
+      <div className="p-6 space-y-4">
+        <h3 className="text-2xl text-white font-display">{project.title}</h3>
         <p className="text-sm text-white/70">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.tech.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70"
+              className="px-3 py-1 text-xs border rounded-full border-white/15 bg-white/5 text-white/70"
             >
               {tag}
             </span>
           ))}
         </div>
-
-        <div className="flex flex-wrap gap-3 pt-2">
+          {project.live ?( <div className="flex flex-wrap gap-3 pt-2">
           <a
             href={project.live}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primaryStart to-primaryEnd px-4 py-2 text-sm text-white transition hover:shadow-glow"
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm text-white transition rounded-full bg-gradient-to-r from-primaryStart to-primaryEnd hover:shadow-glow"
           >
             Live Demo <FaArrowUpRightFromSquare />
           </a>
@@ -48,18 +47,37 @@ const ProjectCard = ({ project, onOpen }) => {
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm text-white/80 transition hover:text-white"
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm transition border rounded-full border-white/20 text-white/80 hover:text-white"
           >
             GitHub <FaGithub />
           </a>
           <button
             type="button"
             onClick={() => onOpen(project)}
-            className="text-sm text-accentBlue underline-offset-4 transition hover:underline"
+            className="text-sm transition text-accentBlue underline-offset-4 hover:underline"
+          >
+            Details
+          </button>
+        </div>)
+        :( <div className="flex flex-wrap gap-3 pt-2">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm transition border rounded-full border-white/20 text-white/80 hover:text-white"
+          >
+            GitHub <FaGithub />
+          </a>
+          <button
+            type="button"
+            onClick={() => onOpen(project)}
+            className="text-sm transition text-accentBlue underline-offset-4 hover:underline"
           >
             Details
           </button>
         </div>
+      )}
+       
       </div>
     </motion.article>
   )

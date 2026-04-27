@@ -56,8 +56,8 @@ export const data = {
     {
       title: 'Frontend',
       items: [
-        { name: 'React', level: 95, icon: 'react' },
-        { name: 'TypeScript', level: 88, icon: 'typescript' },
+        { name: 'React', level: 90, icon: 'react' },
+        { name: 'TypeScript', level: 58, icon: 'typescript' },
         { name: 'Tailwind CSS', level: 92, icon: 'tailwind' },
         { name: 'Next.js', level: 84, icon: 'next' },
       ],
@@ -67,8 +67,8 @@ export const data = {
       items: [
         { name: 'FastAPI', level: 86, icon: 'server' },
         { name: 'Django', level: 84, icon: 'server' },
-        { name: 'MongoDB', level: 82, icon: 'db' },
-        { name: 'PostgreSQL', level: 79, icon: 'db' },
+        { name: 'MongoDB', level: 72, icon: 'db' },
+        { name: 'PostgreSQL', level: 89, icon: 'db' },
       ],
     },
     {
@@ -94,57 +94,43 @@ export const data = {
         description:
           'A finance tracker web app to manage income and expenses.',
         tech: ['React', 'FastAPI', 'Tailwind CSS', 'SQLite'],
-        github: 'https://github.com/money-tracker',
+        live: 'https://money-tracker-pi-two.vercel.app/',
+        github: 'https://github.com/isreal123456/money_tracker.git',
         details:
           'Users can record transactions, categorize spending, and track financial balance in real-time.',
       },
       {
         id: 2,
-        title: 'Pulse Fitness',
-        category: 'Mobile',
-        image:
-          'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80',
-        description:
-          'Workout planner with wearable data sync.',
-        tech: ['React Native', 'Firebase', 'Expo'],
-        live: 'https://example.com',
-        github: 'https://github.com/',
-        details:
-          'Includes streak tracking, subscriptions, and real-time push notifications.',
-      },
-      {
-        id: 3,
-        title: 'Insight CRM',
+        title: 'Inventory Manager',
         category: 'Web',
         image:
           'https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80',
         description:
-          'CRM system with dashboards and analytics.',
-        tech: ['React', 'Chart.js', 'Express', 'PostgreSQL'],
-        live: 'https://example.com',
-        github: 'https://github.com/',
+          'Inventory management system with dashboards and analytics.',
+        tech: ['React', 'Chart.js', 'Tailwind CSS', 'FastAPI'],
+        github: 'https://github.com/isreal123456/solidv2.git',
         details:
-          'Provides dashboards, automation workflows, and optimized reporting.',
+          'The Inventory Manager allows businesses to track stock levels, manage suppliers, and analyze sales trends through interactive dashboards.',
       },
       {
-        id: 4,
-        title: 'Skyline Dashboard',
+        id: 3,
+        title: 'StyleHub',
         category: 'SaaS',
         image:
           'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80',
         description:
-          'Admin dashboard with role-based access.',
-        tech: ['Vite', 'Framer Motion', 'Supabase'],
-        live: 'https://example.com',
-        github: 'https://github.com/',
+          'E-commerce frontend for fashion retailers.',
+        tech: ['Vite','Tailwind CSS'],
+        live: 'https://shop-wine-alpha.vercel.app/',
+        github: 'https://github.com/isreal123456/shop.git',
         details:
-          'Includes onboarding, team management, and advanced UI interactions.',
+          'StyleHub is a responsive e-commerce frontend built with React, featuring product browsing, cart functionality, and admin simulation using mock data. Designed with scalability',
       },
     ],
   },
 
   contact: {
-    email: 'youremail@example.com',
+    email: 'sundayisrael41@gmail.com',
     message:
       'Have a project or idea? Let’s work together.',
   },
